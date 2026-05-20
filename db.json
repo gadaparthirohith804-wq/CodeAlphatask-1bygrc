@@ -1,0 +1,1055 @@
+{
+  "users": [
+    {
+      "id": 1779247865762,
+      "name": "Rohith Gadiparthi",
+      "email": "tester_1779247864622@aetheria.io",
+      "password": "$2a$10$CVZM3HXC/9yCi7rZTLrWbeQ328R4BB.qgyReg74WIsPsMjoq3Qwoa",
+      "role": "user",
+      "createdAt": "2026-05-20T03:31:05.762Z",
+      "addresses": [
+        {
+          "id": "addr-default-1",
+          "title": "Home Address",
+          "name": "Rohith Gadiparthi",
+          "address": "88 Cyber Park, Electronic City",
+          "city": "Bangalore",
+          "zip": "560001",
+          "country": "India",
+          "phone": "+91 98765 43210"
+        }
+      ]
+    },
+    {
+      "id": 1779248624968,
+      "name": "Rohith Gadiparthi",
+      "email": "tester_1779248623826@aetheria.io",
+      "password": "$2a$10$4LRiyFbrAr/zH6qr57qEnOWF83OH1U94kGlDfKoPPzL70vnjOBNKq",
+      "role": "user",
+      "createdAt": "2026-05-20T03:43:44.968Z",
+      "addresses": [
+        {
+          "id": "addr-default-1",
+          "title": "Home Address",
+          "name": "Rohith Gadiparthi",
+          "address": "88 Cyber Park, Electronic City",
+          "city": "Bangalore",
+          "zip": "560001",
+          "country": "India",
+          "phone": "+91 98765 43210"
+        }
+      ]
+    },
+    {
+      "id": 1779248793121,
+      "name": "rohith",
+      "email": "gadiparthirohith1505@gmail.com",
+      "password": "$2a$10$J6Tj2daiGwaynoP80yIiZOi26Fn/4ho4jwPE042Ep2sVC4rO6ucge",
+      "role": "user",
+      "createdAt": "2026-05-20T03:46:33.121Z",
+      "addresses": [
+        {
+          "id": "addr-bu82ov94c",
+          "title": "Home",
+          "name": "Rohith",
+          "address": "4-16 Gadepadu",
+          "city": "Khammam",
+          "zip": "507122",
+          "country": "India",
+          "phone": "+917396336283"
+        }
+      ]
+    },
+    {
+      "id": 1779249153518,
+      "name": "Rohith Gadiparthi",
+      "email": "tester_1779249152383@aetheria.io",
+      "password": "$2a$10$k0ngkFckAsGqx0L0CmUQ0OW7LkfNDl6ntG8Sc4p6szQhXwIiBGMFG",
+      "role": "user",
+      "createdAt": "2026-05-20T03:52:33.518Z",
+      "addresses": [
+        {
+          "id": "addr-default-1",
+          "title": "Home Address",
+          "name": "Rohith Gadiparthi",
+          "address": "88 Cyber Park, Electronic City",
+          "city": "Bangalore",
+          "zip": "560001",
+          "country": "India",
+          "phone": "+91 98765 43210"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 15 Pro (128GB, Natural Titanium)",
+      "brand": "Apple",
+      "description": "The Apple iPhone 15 Pro features a gorgeous, light-weight aerospace-grade titanium design, the powerhouse A17 Pro chip, an adaptable Action button, and a pro-level camera system with 3x optical zoom.",
+      "price": 129900,
+      "originalPrice": 134900,
+      "image": "/images/products/iphone_13_pro.webp",
+      "category": "Mobiles",
+      "stock": 14,
+      "rating": 4.8,
+      "ratingsCount": 4218,
+      "assured": true,
+      "specs": [
+        "6.1-inch Super Retina XDR display with ProMotion and Always-On",
+        "Titanium design with textured matte glass back and Action button",
+        "A17 Pro chip with 6-core GPU for console-level gaming",
+        "Pro camera system: 48MP Main, Ultra Wide, and 3x Telephoto lenses"
+      ],
+      "variations": {
+        "colors": [
+          "Natural Titanium",
+          "Blue Titanium",
+          "White Titanium",
+          "Black Titanium"
+        ],
+        "storage": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S24 Ultra 5G (256GB, Titanium Gray)",
+      "brand": "Samsung",
+      "description": "Welcome to the era of mobile AI. With Galaxy S24 Ultra in your hands, you can unleash whole new levels of creativity, productivity, and possibility. Features a stunning 200MP camera and embedded S Pen.",
+      "price": 129999,
+      "originalPrice": 139999,
+      "image": "/images/products/galaxy_s10.webp",
+      "category": "Mobiles",
+      "stock": 3,
+      "rating": 4.6,
+      "ratingsCount": 3120,
+      "assured": true,
+      "specs": [
+        "6.8-inch Dynamic AMOLED 2X QHD+ Display with 120Hz refresh rate",
+        "Quad Rear Camera: 200MP Main + 50MP + 12MP + 10MP with 100x Space Zoom",
+        "Snapdragon 8 Gen 3 for Galaxy processor with advanced cooling system",
+        "Built-in S Pen for precise sketching, writing, and navigation"
+      ],
+      "variations": {
+        "colors": [
+          "Titanium Gray",
+          "Titanium Yellow",
+          "Titanium Violet"
+        ],
+        "storage": [
+          "256GB",
+          "512GB"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "Realme 12 Pro 5G (128GB, Submarine Blue)",
+      "brand": "Realme",
+      "description": "The Realme 12 Pro 5G sets a new benchmark for mid-range photography. Featuring a 32MP Telephoto Portrait Camera, a luxury watch-inspired premium leather back design, and a curved AMOLED display.",
+      "price": 23999,
+      "originalPrice": 29999,
+      "image": "/images/products/realme_c35.webp",
+      "category": "Mobiles",
+      "stock": 12,
+      "rating": 4.4,
+      "ratingsCount": 1845,
+      "assured": false,
+      "specs": [
+        "6.7-inch FHD+ 120Hz Curved Vision Display for deep immersion",
+        "32MP Sony IMX709 Telephoto Portrait Camera with 2x optical zoom",
+        "Qualcomm Snapdragon 6 Gen 1 5G high-efficiency processor",
+        "5000mAh battery with 67W SUPERVOOC fast charging"
+      ],
+      "variations": {
+        "colors": [
+          "Submarine Blue",
+          "Navigator Beige"
+        ],
+        "storage": [
+          "128GB",
+          "256GB"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "Apple MacBook Pro 14-inch (M3 Pro, Space Black)",
+      "brand": "Apple",
+      "description": "The 14-inch MacBook Pro with the M3 Pro chip delivers jaw-dropping speed and efficiency for demanding workflows. Beautifully finished in Space Black with a Liquid Retina XDR screen.",
+      "price": 199900,
+      "originalPrice": 219900,
+      "image": "/images/products/macbook_pro.webp",
+      "category": "Laptops",
+      "stock": 4,
+      "rating": 4.9,
+      "ratingsCount": 954,
+      "assured": true,
+      "specs": [
+        "Apple M3 Pro chip with 11-core CPU and 14-core GPU",
+        "14.2-inch Liquid Retina XDR display with ProMotion 120Hz",
+        "18GB unified memory and 512GB super-fast SSD storage",
+        "Up to 18 hours of battery life with advanced thermal architecture"
+      ],
+      "variations": {
+        "colors": [
+          "Space Black",
+          "Silver"
+        ],
+        "ram": [
+          "18GB",
+          "36GB"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "Dell XPS 13 9340 Laptop (Platinum)",
+      "brand": "Dell",
+      "description": "Crafted with premium machined aluminum and glass, the Dell XPS 13 combines a stunning InfinityEdge display with Intel's latest AI-ready Core Ultra processor for high-end productivity.",
+      "price": 169990,
+      "originalPrice": 189990,
+      "image": "/images/products/dell_xps.webp",
+      "category": "Laptops",
+      "stock": 7,
+      "rating": 4.5,
+      "ratingsCount": 512,
+      "assured": true,
+      "specs": [
+        "Intel Core Ultra 7 155H Processor with built-in NPU for AI acceleration",
+        "13.4-inch FHD+ InfinityEdge Display with 500 nits brightness",
+        "16GB LPDDR5x RAM and 512GB PCIe Gen 4 SSD",
+        "Ultra-thin profile weighing only 1.2 kg with seamless glass touchpad"
+      ],
+      "variations": {
+        "colors": [
+          "Platinum",
+          "Graphite"
+        ],
+        "storage": [
+          "512GB",
+          "1TB"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "Apple AirPods Max Wireless Over-Ear Headphones",
+      "brand": "Apple",
+      "description": "AirPods Max redefine over-ear audio. An Apple-designed dynamic driver provides immersive high-fidelity sound. Every detail, from canopy to cushion, is engineered for a custom fit.",
+      "price": 59900,
+      "originalPrice": 64900,
+      "image": "/images/products/airpods_max.webp",
+      "category": "Audio",
+      "stock": 20,
+      "rating": 4.8,
+      "ratingsCount": 6812,
+      "assured": true,
+      "specs": [
+        "Apple-designed dynamic driver delivers high-fidelity sound quality",
+        "Industry-leading Active Noise Cancellation blocks outside noise",
+        "Transparency mode lets you hear and interact with the world around you",
+        "Spatial audio with dynamic head tracking for theater-like sound"
+      ],
+      "variations": {
+        "colors": [
+          "Space Grey",
+          "Silver",
+          "Sky Blue",
+          "Pink"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "Beats Flex Wireless Neckband Earphones (Black)",
+      "brand": "Beats",
+      "description": "Whether in your ears or around your neck, Beats Flex are as versatile as the life you lead. With up to 12 hours of battery life and magnetic earbuds for auto-pause.",
+      "price": 4499,
+      "originalPrice": 5999,
+      "image": "/images/products/beats_flex.webp",
+      "category": "Audio",
+      "stock": 35,
+      "rating": 4.5,
+      "ratingsCount": 9540,
+      "assured": true,
+      "specs": [
+        "Magnetic earbuds with Auto-Play/Pause functionality",
+        "Up to 12 hours of listening time on a single charge",
+        "Flex-Form cable provides all-day comfort with durable Nitinol construction",
+        "Apple W1 headphone chip for seamless iOS & Android connectivity"
+      ],
+      "variations": {
+        "colors": [
+          "Black",
+          "Yuzu Yellow",
+          "Smoke Grey"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "Apple Watch Series 9 GPS (41mm, Midnight)",
+      "brand": "Apple",
+      "description": "The Apple Watch Series 9 is smarter, brighter, and faster. Featuring the S9 SiP chip, a magic new way to use your watch without touching the screen (Double Tap), and comprehensive health insights.",
+      "price": 41900,
+      "originalPrice": 45900,
+      "image": "/images/products/apple_watch_s4.webp",
+      "category": "Wearables",
+      "stock": 18,
+      "rating": 4.7,
+      "ratingsCount": 2210,
+      "assured": true,
+      "specs": [
+        "S9 SiP with 64-bit dual-core processor and 4-core Apple Neural Engine",
+        "Always-On Retina OLED display with up to 2000 nits brightness",
+        "Blood oxygen sensor, electrical heart sensor, and temperature sensing",
+        "Double Tap gesture lets you answer calls, pause music, and more"
+      ],
+      "variations": {
+        "colors": [
+          "Midnight",
+          "Starlight",
+          "Silver"
+        ],
+        "size": [
+          "41mm",
+          "45mm"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "Rolex Submariner Date (Oystersteel, Black Dial)",
+      "brand": "Rolex",
+      "description": "The Rolex Submariner is the absolute benchmark for luxury divers' watches. Crafted in Oystersteel, it features a unidirectional rotatable bezel with black Cerachrom insert and a black dial.",
+      "price": 1045000,
+      "originalPrice": 1150000,
+      "image": "/images/products/rolex_submariner.webp",
+      "category": "Wearables",
+      "stock": 3,
+      "rating": 4.9,
+      "ratingsCount": 654,
+      "assured": true,
+      "specs": [
+        "Unidirectional rotatable bezel with Cerachrom ceramic insert",
+        "Oystersteel case and Oyster bracelet with Oysterlock clasp",
+        "Water-resistant to 300 meters / 1000 feet with Triplock system",
+        "Rolex Calibre 3235 self-winding mechanical movement"
+      ],
+      "variations": {
+        "colors": [
+          "Black Dial/Bezel",
+          "Green Dial/Bezel"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "Green Soul Monster Ultimate Gaming & Office Chair",
+      "brand": "Green Soul",
+      "description": "Designed for maximum support and seating comfort during long working or gaming sessions. Features premium breathable spandex fabric and customizable ergonomic settings.",
+      "price": 17990,
+      "originalPrice": 24990,
+      "image": "/images/products/executive_chair.webp",
+      "category": "Home & Kitchen",
+      "stock": 5,
+      "rating": 4.8,
+      "ratingsCount": 412,
+      "assured": true,
+      "specs": [
+        "Ergonomically designed high backrest with removable neck & lumbar pillows",
+        "4D adjustable armrests (height, angle, back-forth, left-right)",
+        "Premium breathable spandex and PU leather upholstery",
+        "Heavy-duty metal base with 60mm dual-wheel polyurethane casters"
+      ],
+      "variations": {
+        "colors": [
+          "Black/Red",
+          "Black/Blue",
+          "Full Black"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "Sleepyhead Grand - Solid Wood King Size Bed",
+      "brand": "Sleepyhead",
+      "description": "Constructed from 100% genuine solid Sheesham wood, this premium king-size bed boasts high durability, a clean honey finish, and classic mid-century structural aesthetics.",
+      "price": 24999,
+      "originalPrice": 34999,
+      "image": "/images/products/annibale_bed.webp",
+      "category": "Home & Kitchen",
+      "stock": 2,
+      "rating": 4.9,
+      "ratingsCount": 128,
+      "assured": true,
+      "specs": [
+        "Handcrafted frame in solid Sheesham wood with honey color lacquer",
+        "Orthopaedic slat support system for balanced mattress pressure distribution",
+        "Aesthetic high-back wooden headboard with minimalist styling",
+        "Termite-resistant wood treatment and heavy duty assembly joints"
+      ],
+      "variations": {
+        "size": [
+          "King Size",
+          "Queen Size"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "Prestige Omega Deluxe Granite Cookware Set",
+      "brand": "Prestige",
+      "description": "Premium 3-piece cookware set designed for professional cooking. Features a 5-layer non-stick coating with a tough granite finish that is induction and gas compatible.",
+      "price": 3299,
+      "originalPrice": 4500,
+      "image": "/images/products/silver_pot.webp",
+      "category": "Home & Kitchen",
+      "stock": 25,
+      "rating": 4.6,
+      "ratingsCount": 1842,
+      "assured": false,
+      "specs": [
+        "Durable 5-layer non-stick surface with scratch-resistant granite finish",
+        "Set includes: Omnitawa 250mm, Fry Pan 240mm, and Kadai 240mm with Lid",
+        "Sturdy heat-resistant handles for comfortable handling",
+        "Completely PFOA-free and compatible with induction & gas cooktops"
+      ],
+      "variations": {
+        "colors": [
+          "Black",
+          "Red"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "Yonex Muscle Power 29 Lite Badminton Racket",
+      "brand": "Yonex",
+      "description": "The Yonex Muscle Power 29 Lite features an isometric frame design for a larger sweet spot and Yonex's Muscle Power frame structure to eliminate stress-friction on strings.",
+      "price": 2499,
+      "originalPrice": 3299,
+      "image": "/images/products/tennis_racket.webp",
+      "category": "Sports & Fitness",
+      "stock": 15,
+      "rating": 4.7,
+      "ratingsCount": 842,
+      "assured": true,
+      "specs": [
+        "Full Carbon Graphite frame and shaft for high rebound and stability",
+        "Isometric head shape expands the sweet spot area for off-center shots",
+        "Muscle Power frame seats strings on rounded arches for low friction",
+        "Lightweight construction (approx. 85g) with excellent head balance"
+      ],
+      "variations": {
+        "grip": [
+          "G4",
+          "G5"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name": "Spalding TF-250 All-Conference Basketball",
+      "brand": "Spalding",
+      "description": "Built for competitive indoor and outdoor play, the Spalding TF-250 features a premium composite leather cover that provides an exceptional grip and rebound control.",
+      "price": 3499,
+      "originalPrice": 4999,
+      "image": "/images/products/basketball.webp",
+      "category": "Sports & Fitness",
+      "stock": 45,
+      "rating": 4.5,
+      "ratingsCount": 2984,
+      "assured": true,
+      "specs": [
+        "All-Conference composite leather cover for soft grip and durability",
+        "Deep channels and pebbled pattern provide superior tactile control",
+        "Designed for premium indoor and outdoor competitive court play",
+        "Butyl rubber bladder preserves long-term air pressure and roundness"
+      ],
+      "variations": {
+        "size": [
+          "Size 7",
+          "Size 6"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "name": "Nike Air Jordan 1 Retro High OG (Chicago Red)",
+      "brand": "Nike",
+      "description": "The classic sneaker that started a global revolution. The Air Jordan 1 High OG features premium leather construction, bold color blocking, and Nike Air sole cushioning.",
+      "price": 16995,
+      "originalPrice": 18995,
+      "image": "/images/products/nike_jordan.webp",
+      "category": "Fashion",
+      "stock": 30,
+      "rating": 4.8,
+      "ratingsCount": 3840,
+      "assured": true,
+      "specs": [
+        "Premium full-grain leather upper provides structure and durability",
+        "Encapsulated Air-Sole unit in the heel cushions heavy foot impact",
+        "Solid rubber outsole provides high traction on court and street surfaces",
+        "Classic high-top silhouette with iconic Wings logo branding"
+      ],
+      "variations": {
+        "colors": [
+          "Chicago Red",
+          "University Blue"
+        ],
+        "size": [
+          "US 8",
+          "US 9",
+          "US 10",
+          "US 11"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "name": "Lavie Women's Faux Leather Handbag (Black)",
+      "brand": "Lavie",
+      "description": "A stylish, textured faux leather tote bag designed for modern women. Features dual rounded handles, a detachable shoulder strap, and multiple internal organizing pockets.",
+      "price": 2999,
+      "originalPrice": 4999,
+      "image": "/images/products/prada_bag.webp",
+      "category": "Fashion",
+      "stock": 5,
+      "rating": 4.9,
+      "ratingsCount": 412,
+      "assured": true,
+      "specs": [
+        "Crafted from premium water-resistant textured faux leather",
+        "Spacious main compartment with a zipper closure and back wall pockets",
+        "Detachable, adjustable synthetic leather shoulder strap",
+        "Golden metal hardware details on handles and buckles"
+      ],
+      "variations": {
+        "colors": [
+          "Black",
+          "Tan",
+          "Navy Blue"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "name": "Skybags Brat Black 34L Casual Backpack",
+      "brand": "Skybags",
+      "description": "A trendy, lightweight casual backpack featuring three large compartments, a front utility zipper pocket, and padded shoulder straps for daily school, college, or travel use.",
+      "price": 1599,
+      "originalPrice": 2499,
+      "image": "/images/products/faux_leather_backpack.webp",
+      "category": "Fashion",
+      "stock": 22,
+      "rating": 4.4,
+      "ratingsCount": 812,
+      "assured": false,
+      "specs": [
+        "34 Liters capacity with three spacious primary chambers",
+        "Durable, water-resistant polyester fabric construction",
+        "Padded back panel and adjustable mesh shoulder straps",
+        "Double-stitched stress points for enhanced load carrying support"
+      ],
+      "variations": {
+        "colors": [
+          "Black",
+          "Blue",
+          "Red"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "name": "Nescafe Classic Instant Coffee Glass Jar (200g)",
+      "brand": "Nescafe",
+      "description": "Start your day with the rich, unmistakable aroma and bold taste of Nescafe Classic. Made from 100% pure, carefully roasted Robusta coffee beans.",
+      "price": 645,
+      "originalPrice": 699,
+      "image": "/images/products/nescafe_coffee.webp",
+      "category": "Groceries",
+      "stock": 120,
+      "rating": 4.5,
+      "ratingsCount": 8940,
+      "assured": true,
+      "specs": [
+        "100% pure soluble coffee granules made from selected Robusta beans",
+        "Rich, full-bodied medium dark roast flavor profile",
+        "Double-walled glass jar with lock-in aroma seal cap",
+        "Instantly dissolves in hot milk or water for a perfect cup"
+      ],
+      "variations": {
+        "size": [
+          "100g",
+          "200g"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "name": "Dabur Honey 100% Pure & Natural Jar (1kg)",
+      "brand": "Dabur",
+      "description": "Sourced from the finest forest nectar in the Himalayas, Dabur Honey is 100% pure, unadulterated, and meets all international quality standards. Great for immunity and digestion.",
+      "price": 399,
+      "originalPrice": 450,
+      "image": "/images/products/honey_jar.webp",
+      "category": "Groceries",
+      "stock": 80,
+      "rating": 4.7,
+      "ratingsCount": 3120,
+      "assured": true,
+      "specs": [
+        "100% pure honey with no added sugar or artificial preservatives",
+        "Sourced from local Himalayan valleys and wild forest beehives",
+        "Rich in natural antioxidants, vitamins, and minerals",
+        "Airtight glass jar packaging preserves natural enzyme profile"
+      ],
+      "variations": {
+        "size": [
+          "500g",
+          "1kg"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "name": "Maybelline Lash Sensational Waterproof Mascara",
+      "brand": "Maybelline",
+      "description": "Achieve full, high-impact lash volume and definition. Features a unique fanning brush with ten layers of bristles to coat each lash from root to tip.",
+      "price": 549,
+      "originalPrice": 699,
+      "image": "/images/products/essence_mascara.webp",
+      "category": "Beauty & Grooming",
+      "stock": 150,
+      "rating": 4.6,
+      "ratingsCount": 14210,
+      "assured": true,
+      "specs": [
+        "Waterproof and smudge-resistant formula lasts up to 24 hours",
+        "Exclusive fanning brush reveals layers of dense lashes",
+        "Ophthalmologist tested, suitable for contact lens wearers",
+        "Easily removable with gentle biphasic eye makeup remover"
+      ],
+      "variations": {
+        "type": [
+          "Waterproof",
+          "Washable"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "name": "L'Oreal Paris La Petite Eyeshadow Palette (Nude)",
+      "brand": "L'Oreal",
+      "description": "A highly-pigmented mini eyeshadow palette featuring 5 velvety, blendable shades in matte and shimmer finishes. Perfect for travel and daily quick touch-ups.",
+      "price": 899,
+      "originalPrice": 999,
+      "image": "/images/products/eyeshadow_palette.webp",
+      "category": "Beauty & Grooming",
+      "stock": 90,
+      "rating": 4.5,
+      "ratingsCount": 4210,
+      "assured": true,
+      "specs": [
+        "5 highly pigmented nude, beige, and bronze shades in one palette",
+        "Crease-resistant, velvety-soft formula blends effortlessly",
+        "Compact, travel-friendly packaging easily fits inside any purse",
+        "Includes shades suitable for base, crease, liner, and highlighting"
+      ],
+      "variations": {
+        "palette": [
+          "Nude Intense",
+          "Rose Elegance",
+          "Gold Glow"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "name": "LEGO Star Wars Millennium Falcon Set (75257)",
+      "brand": "LEGO",
+      "description": "Inspire kids and Star Wars collectors alike with this highly detailed building kit model of the iconic Millennium Falcon starship. Features opening panels and laser cannons.",
+      "price": 14999,
+      "originalPrice": 16999,
+      "image": "/images/products/lego_falcon.webp",
+      "category": "Toys & Games",
+      "stock": 12,
+      "rating": 4.8,
+      "ratingsCount": 954,
+      "assured": true,
+      "specs": [
+        "Millennium Falcon brick-built model with 1,353 pieces",
+        "Includes 7 minifigures: Finn, Chewbacca, C-3PO, Lando, and more",
+        "Interactive interior features cargo area, navigation table, and hyperdrive",
+        "Equipped with spring-loaded shooters and rotatable top/bottom turrets"
+      ],
+      "variations": {
+        "version": [
+          "Standard Edition"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "name": "DJI Mini 2 SE Camera Drone Fly More Combo",
+      "brand": "DJI",
+      "description": "Capture breathtaking aerial footage wherever you go. At less than 249 grams, it is exceptionally lightweight and portable, offering up to 31 minutes flight time.",
+      "price": 38990,
+      "originalPrice": 45000,
+      "image": "/images/products/dji_drone.webp",
+      "category": "Toys & Games",
+      "stock": 10,
+      "rating": 4.7,
+      "ratingsCount": 1120,
+      "assured": true,
+      "specs": [
+        "Weighs less than 249g - exempt from registration in many regions",
+        "2.7K HD video recording with 3-axis motorized stabilization gimbal",
+        "Up to 31 minutes flight time per battery pack (3 batteries included in Combo)",
+        "10km high-definition video transmission with smart return-home"
+      ],
+      "variations": {
+        "combo": [
+          "Standard",
+          "Fly More Combo"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "name": "Atomic Habits by James Clear (Hardcover)",
+      "brand": "Penguin",
+      "description": "The international bestseller. Atomic Habits provides a simple, proven framework for improving every day. James Clear reveals practical strategies to form good habits and break bad ones.",
+      "price": 499,
+      "originalPrice": 799,
+      "image": "/images/products/hobbit_book.webp",
+      "category": "Books",
+      "stock": 45,
+      "rating": 4.9,
+      "ratingsCount": 2210,
+      "assured": true,
+      "specs": [
+        "Premium hardcover format with dust jacket cover wrapper",
+        "International bestseller translated into over 50 languages",
+        "Includes practical templates and habit tracking sheets",
+        "High-quality paper stock with clear, readable typography layout"
+      ],
+      "variations": {
+        "cover": [
+          "Hardcover",
+          "Paperback"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "name": "The Psychology of Money by Morgan Housel",
+      "brand": "Jaico",
+      "description": "Doing well with money isn't necessarily about what you know. It's about how you behave. Morgan Housel shares 19 short stories exploring the strange ways people think about money.",
+      "price": 299,
+      "originalPrice": 399,
+      "image": "/images/products/leather_journal.webp",
+      "category": "Books",
+      "stock": 65,
+      "rating": 4.8,
+      "ratingsCount": 1432,
+      "assured": false,
+      "specs": [
+        "Paperback format with textured cover matte design",
+        "Explores behavioral finance and decision-making concepts",
+        "Over 3 million copies sold worldwide",
+        "Easy-to-read style with actionable personal finance tips"
+      ],
+      "variations": {
+        "cover": [
+          "Paperback",
+          "Kindle"
+        ]
+      }
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-823281",
+      "userId": 1779247865762,
+      "items": [
+        {
+          "id": 1,
+          "name": "Apple iPhone 15 Pro (128GB, Natural Titanium)",
+          "price": 129900,
+          "image": "/images/products/iphone_13_pro.webp",
+          "quantity": 1
+        }
+      ],
+      "total": 129900,
+      "shippingAddress": {
+        "name": "Rohith Gadiparthi",
+        "address": "88 Cyber Park, Electronic City",
+        "city": "Bangalore",
+        "zip": "560001",
+        "country": "India",
+        "phone": "+91 98765 43210"
+      },
+      "paymentMethod": "UPI / Online",
+      "status": "Processing",
+      "createdAt": "2026-05-20T03:31:05.866Z"
+    },
+    {
+      "id": "ORD-685237",
+      "userId": 1779248624968,
+      "items": [
+        {
+          "id": 1,
+          "name": "Apple iPhone 15 Pro (128GB, Natural Titanium)",
+          "price": 129900,
+          "image": "/images/products/iphone_13_pro.webp",
+          "quantity": 1
+        }
+      ],
+      "total": 129900,
+      "shippingAddress": {
+        "name": "Rohith Gadiparthi",
+        "address": "88 Cyber Park, Electronic City",
+        "city": "Bangalore",
+        "zip": "560001",
+        "country": "India",
+        "phone": "+91 98765 43210"
+      },
+      "paymentMethod": "UPI / Online",
+      "status": "Processing",
+      "createdAt": "2026-05-20T03:43:45.063Z"
+    },
+    {
+      "id": "ORD-928262",
+      "userId": 1779249153518,
+      "items": [
+        {
+          "id": 1,
+          "name": "Apple iPhone 15 Pro (128GB, Natural Titanium)",
+          "price": 129900,
+          "image": "/images/products/iphone_13_pro.webp",
+          "quantity": 1
+        }
+      ],
+      "total": 129900,
+      "shippingAddress": {
+        "name": "Rohith Gadiparthi",
+        "address": "88 Cyber Park, Electronic City",
+        "city": "Bangalore",
+        "zip": "560001",
+        "country": "India",
+        "phone": "+91 98765 43210"
+      },
+      "paymentMethod": "UPI / Online",
+      "status": "Processing",
+      "createdAt": "2026-05-20T03:52:33.616Z"
+    },
+    {
+      "id": "ORD-250204",
+      "userId": 1779248793121,
+      "items": [
+        {
+          "id": 1,
+          "name": "Apple iPhone 15 Pro (128GB, Natural Titanium)",
+          "price": 129900,
+          "image": "/images/products/iphone_13_pro.webp",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "Samsung Galaxy S24 Ultra 5G (256GB, Titanium Gray)",
+          "price": 129999,
+          "image": "/images/products/galaxy_s10.webp",
+          "quantity": 1
+        },
+        {
+          "id": 6,
+          "name": "Apple AirPods Max Wireless Over-Ear Headphones",
+          "price": 59900,
+          "image": "/images/products/airpods_max.webp",
+          "quantity": 1
+        }
+      ],
+      "total": 319799,
+      "shippingAddress": {
+        "name": "rohith",
+        "address": "4-16 gadepadu,near majid",
+        "city": "Khammam",
+        "zip": "507122",
+        "country": "India"
+      },
+      "paymentMethod": "UPI / Online",
+      "status": "Processing",
+      "createdAt": "2026-05-20T03:55:01.364Z"
+    },
+    {
+      "id": "ORD-759601",
+      "userId": 1779248793121,
+      "items": [
+        {
+          "id": 1,
+          "name": "Apple iPhone 15 Pro (128GB, Natural Titanium)",
+          "price": 129900,
+          "image": "/images/products/iphone_13_pro.webp",
+          "stock": 20,
+          "quantity": 1
+        }
+      ],
+      "total": 129900,
+      "shippingAddress": {
+        "id": "addr-bu82ov94c",
+        "title": "Home",
+        "name": "Rohith",
+        "address": "4-16 Gadepadu",
+        "city": "Khammam",
+        "zip": "507122",
+        "country": "India",
+        "phone": "+917396336283"
+      },
+      "paymentMethod": "cod",
+      "status": "Placed",
+      "createdAt": "2026-05-20T04:08:04.547Z"
+    },
+    {
+      "id": "ORD-635260",
+      "userId": 1779248793121,
+      "items": [
+        {
+          "id": 1,
+          "name": "Apple iPhone 15 Pro (128GB, Natural Titanium)",
+          "price": 129900,
+          "image": "/images/products/iphone_13_pro.webp",
+          "stock": 19,
+          "quantity": 1
+        }
+      ],
+      "total": 129900,
+      "shippingAddress": {
+        "id": "addr-bu82ov94c",
+        "title": "Home",
+        "name": "Rohith",
+        "address": "4-16 Gadepadu",
+        "city": "Khammam",
+        "zip": "507122",
+        "country": "India",
+        "phone": "+917396336283"
+      },
+      "paymentMethod": "cod",
+      "status": "Placed",
+      "createdAt": "2026-05-20T04:14:42.662Z"
+    },
+    {
+      "id": "ORD-294101",
+      "userId": 1779248793121,
+      "items": [
+        {
+          "cartItemId": "1-Natural Titanium-256GB",
+          "id": 1,
+          "name": "Apple iPhone 15 Pro (128GB, Natural Titanium)",
+          "price": 129900,
+          "image": "/images/products/iphone_13_pro.webp",
+          "stock": 15,
+          "quantity": 1,
+          "selectedVariations": {
+            "colors": "Natural Titanium",
+            "storage": "256GB"
+          }
+        }
+      ],
+      "total": 129900,
+      "shippingAddress": {
+        "id": "addr-bu82ov94c",
+        "title": "Home",
+        "name": "Rohith",
+        "address": "4-16 Gadepadu",
+        "city": "Khammam",
+        "zip": "507122",
+        "country": "India",
+        "phone": "+917396336283"
+      },
+      "paymentMethod": "cod",
+      "status": "Placed",
+      "createdAt": "2026-05-20T04:37:16.892Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "productId": 1,
+      "name": "Arjun Sharma",
+      "rating": 5,
+      "comment": "Absolutely phenomenal phone. The camera zoom is spectacular!",
+      "createdAt": "2026-05-18T10:15:30.000Z"
+    },
+    {
+      "id": 2,
+      "productId": 1,
+      "name": "Sneha Patel",
+      "rating": 4,
+      "comment": "Battery life is excellent and the screen is beautiful. Deducted 1 star because it gets slightly warm.",
+      "createdAt": "2026-05-19T14:22:15.000Z"
+    },
+    {
+      "id": 3,
+      "productId": 2,
+      "name": "Rohit Verma",
+      "rating": 4,
+      "comment": "Very good screen. A classic flagship from Samsung.",
+      "createdAt": "2026-05-17T09:05:00.000Z"
+    },
+    {
+      "id": 4,
+      "productId": 4,
+      "name": "Tanmay Das",
+      "rating": 5,
+      "comment": "Handles all my developer compilation tasks without breaking a sweat. Silent and runs cool.",
+      "createdAt": "2026-05-16T16:40:00.000Z"
+    },
+    {
+      "id": 5,
+      "productId": 6,
+      "name": "Vikram Malhotra",
+      "rating": 5,
+      "comment": "Audio is rich and balanced. The active noise cancelling is top-tier.",
+      "createdAt": "2026-05-18T11:20:00.000Z"
+    },
+    {
+      "id": 6,
+      "productId": 8,
+      "name": "Pooja Hegde",
+      "rating": 5,
+      "comment": "ECG and health trackers are very useful. S9 chip is super responsive.",
+      "createdAt": "2026-05-15T12:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "productId": 15,
+      "name": "Rahul Sen",
+      "rating": 5,
+      "comment": "Very comfortable lifestyle sneakers. Air Jordans are legendary.",
+      "createdAt": "2026-05-19T23:59:00.000Z"
+    },
+    {
+      "id": 8,
+      "productId": 22,
+      "name": "Divya R.",
+      "rating": 5,
+      "comment": "Amazing build! LEGO did an incredible job with the interior cargo bay details.",
+      "createdAt": "2026-05-18T20:10:00.000Z"
+    },
+    {
+      "id": 9,
+      "productId": 24,
+      "name": "Amit Mishra",
+      "rating": 5,
+      "comment": "This book is absolutely life-changing. A must-read for everyone seeking self-improvement!",
+      "createdAt": "2026-05-19T11:45:00.000Z"
+    }
+  ]
+}

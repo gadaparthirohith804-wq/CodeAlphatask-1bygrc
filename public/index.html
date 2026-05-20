@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AETHERIA | Premium Futuristic Tech & Marketplace</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Explore Aetheria's curated collection of futuristic premium gadgets, featuring mechanical cyber keyboards, smart rings, spatial audio neural headsets, and ambient lights.">
+  <meta name="keywords" content="futuristic tech, mechanical keyboard, smart ring, neural headset, ambient light, holographic projector, bio security key">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Leaflet CSS for Map Tracking -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  
+  <!-- Cyberpunk Digital Wave Grid Background -->
+  <div class="cyber-grid-bg"></div>
+  
+  <!-- Toast Notification System -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Amazon-Style Multi-Layer Navbar -->
+  <header class="navbar-wrapper">
+    <!-- Top Bar -->
+    <div class="nav-main">
+      <div class="nav-container">
+        <!-- Logo -->
+        <a href="#" class="nav-logo" id="nav-logo">
+          <span class="logo-accent">A</span>ETHERIA
+        </a>
+        
+        <!-- Address Selector Pin -->
+        <div class="nav-address-box" id="nav-address-trigger">
+          <i class="fa-solid fa-location-dot nav-pin-icon"></i>
+          <div class="nav-address-text">
+            <span class="nav-line-1" id="nav-addr-user">Deliver to Guest</span>
+            <span class="nav-line-2" id="nav-addr-details">Select Location</span>
+          </div>
+        </div>
+
+        <!-- Central Search Bar with Category Select & Autocomplete -->
+        <div class="nav-search-wrapper">
+          <div class="nav-search-bar">
+            <select id="nav-search-category" class="search-category-select">
+              <option value="all">All Categories</option>
+              <option value="mobiles">Mobiles</option>
+              <option value="laptops">Laptops</option>
+              <option value="audio">Audio</option>
+              <option value="wearables">Wearables</option>
+              <option value="home & kitchen">Home & Kitchen</option>
+              <option value="sports & fitness">Sports & Fitness</option>
+              <option value="fashion">Fashion</option>
+              <option value="groceries">Groceries</option>
+              <option value="beauty & grooming">Beauty & Grooming</option>
+              <option value="toys & games">Toys & Games</option>
+              <option value="books">Books</option>
+            </select>
+            <input type="text" id="search-input" placeholder="Search Aetheria future tech..." autocomplete="off">
+            <button class="nav-search-submit" id="search-submit-btn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+          <!-- Autocomplete suggestions menu -->
+          <div class="search-suggestions hidden" id="search-suggestions"></div>
+        </div>
+
+        <!-- Navigation Actions -->
+        <nav class="nav-actions">
+          <!-- User Profile Menu -->
+          <div id="auth-nav-section">
+            <button class="btn btn-outline" id="login-trigger-btn">
+              <i class="fa-solid fa-user"></i> Sign In
+            </button>
+          </div>
+          
+          <div id="user-nav-section" class="user-profile-menu hidden">
+            <div class="profile-trigger" id="profile-menu-trigger">
+              <span class="nav-line-1">Hello, <strong id="username-display">User</strong></span>
+              <span class="nav-line-2">Account & Lists <i class="fa-solid fa-caret-down"></i></span>
+            </div>
+            <div class="user-dropdown-menu" id="user-dropdown-menu">
+              <a href="#/orders" class="dropdown-item"><i class="fa-solid fa-box-open"></i> Return & Orders</a>
+              <a href="#" class="dropdown-item" id="manage-addresses-btn"><i class="fa-solid fa-address-book"></i> Address Book</a>
+              <hr class="dropdown-divider">
+              <a href="#" class="dropdown-item" id="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a>
+            </div>
+          </div>
+
+          <!-- Returns & Orders shortcut -->
+          <a href="#/orders" class="nav-orders-shortcut">
+            <span class="nav-line-1">Returns</span>
+            <span class="nav-line-2">& Orders</span>
+          </a>
+
+          <!-- Cart Button -->
+          <button class="btn btn-cart" id="cart-trigger-btn">
+            <div class="cart-icon-container">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="cart-badge" id="cart-count">0</span>
+            </div>
+            <span class="cart-label">Cart</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Sub-Navbar Category Shortcuts -->
+    <div class="nav-sub">
+      <div class="nav-container">
+        <ul class="nav-sub-links">
+          <li class="nav-sub-item active" data-category="all"><i class="fa-solid fa-bars"></i> All Categories</li>
+          <li class="nav-sub-item" data-category="mobiles">Mobiles</li>
+          <li class="nav-sub-item" data-category="laptops">Laptops</li>
+          <li class="nav-sub-item" data-category="audio">Audio</li>
+          <li class="nav-sub-item" data-category="wearables">Wearables</li>
+          <li class="nav-sub-item" data-category="home & kitchen">Home & Kitchen</li>
+          <li class="nav-sub-item" data-category="sports & fitness">Sports & Fitness</li>
+          <li class="nav-sub-item" data-category="fashion">Fashion</li>
+          <li class="nav-sub-item" data-category="groceries">Groceries</li>
+          <li class="nav-sub-item" data-category="beauty & grooming">Beauty & Grooming</li>
+          <li class="nav-sub-item" data-category="toys & games">Toys & Games</li>
+          <li class="nav-sub-item" data-category="books">Books</li>
+        </ul>
+        <div class="nav-sub-promo">
+          <span>Futuristic Tech Sale: Use Code <strong class="neon-text">NEON2026</strong> for 10% Off!</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main View Router Container -->
+  <main class="router-view" id="router-view-container">
+    
+    <!-- Home View -->
+    <div class="view-panel" id="home-view">
+      <!-- Promotional Slider Carousel -->
+      <section class="banner-carousel">
+        <div class="carousel-track" id="carousel-track">
+          <!-- Slide 1 -->
+          <div class="carousel-slide active" style="background-image: linear-gradient(90deg, rgba(10,10,12,0.95) 30%, rgba(10,10,12,0.3) 100%), url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1600&auto=format&fit=crop');">
+            <div class="slide-content">
+              <span class="slide-tag">EXCLUSIVE MOBILES FESTIVAL</span>
+              <h2 class="slide-title">Apple iPhone 15 Pro Max</h2>
+              <p class="slide-desc">Titanium build. A17 Pro gaming chip. Up to 10% instant bank discounts on select credit cards.</p>
+              <button class="btn btn-primary btn-glow learn-more-btn" data-category="mobiles">Explore Mobile Deals</button>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-slide" style="background-image: linear-gradient(90deg, rgba(10,10,12,0.95) 30%, rgba(10,10,12,0.3) 100%), url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1600&auto=format&fit=crop');">
+            <div class="slide-content">
+              <span class="slide-tag">PREMIUM LAPTOPS CARNIVAL</span>
+              <h2 class="slide-title">Supercharged MacBook Pro</h2>
+              <p class="slide-desc">Unrivaled processing power, revolutionary graphics performance, and up to 22 hours of battery life.</p>
+              <button class="btn btn-primary btn-glow learn-more-btn" data-category="laptops">Shop MacBook Pro</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-arrow prev" id="carousel-prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-arrow next" id="carousel-next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        <div class="carousel-dots" id="carousel-dots-container"></div>
+      </section>
+
+      <!-- Main Marketplace Grid Layout -->
+      <div class="store-container">
+        <!-- Sidebar filters -->
+        <aside class="filters-sidebar">
+          <div class="filter-group">
+            <h3>Categories</h3>
+            <ul class="category-list" id="category-filter-list">
+              <li class="active" data-category="all"><i class="fa-solid fa-circle-nodes"></i> All Products</li>
+              <li data-category="mobiles"><i class="fa-solid fa-mobile-screen-button"></i> Mobiles</li>
+              <li data-category="laptops"><i class="fa-solid fa-laptop"></i> Laptops</li>
+              <li data-category="audio"><i class="fa-solid fa-headphones"></i> Audio</li>
+              <li data-category="wearables"><i class="fa-solid fa-clock"></i> Wearables</li>
+              <li data-category="home & kitchen"><i class="fa-solid fa-house-chimney"></i> Home & Kitchen</li>
+              <li data-category="sports & fitness"><i class="fa-solid fa-dumbbell"></i> Sports & Fitness</li>
+              <li data-category="fashion"><i class="fa-solid fa-shirt"></i> Fashion</li>
+              <li data-category="groceries"><i class="fa-solid fa-basket-shopping"></i> Groceries</li>
+              <li data-category="beauty & grooming"><i class="fa-solid fa-wand-magic-sparkles"></i> Beauty & Grooming</li>
+              <li data-category="toys & games"><i class="fa-solid fa-gamepad"></i> Toys & Games</li>
+              <li data-category="books"><i class="fa-solid fa-book"></i> Books</li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <h3>Sort By</h3>
+            <select id="sort-select" class="form-control">
+              <option value="default">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Avg. Customer Review</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <h3>Refine Price</h3>
+            <div class="price-range-inputs">
+              <input type="number" id="price-min" placeholder="Min" class="form-control">
+              <span>to</span>
+              <input type="number" id="price-max" placeholder="Max" class="form-control">
+              <button class="btn btn-outline btn-sm" id="price-go-btn">Go</button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Catalog Container -->
+        <section class="products-section">
+          <!-- Featured Specials (Deals Section) -->
+          <div class="deal-of-the-day-section" id="deals-banner-panel">
+            <div class="deal-header">
+              <span class="deal-tag">⚡ DEAL OF THE DAY</span>
+              <div class="countdown-timer">
+                <span>Offer ends in: </span>
+                <span class="timer-digits" id="deal-timer">04:12:45</span>
+              </div>
+            </div>
+            <div class="deal-body" id="special-deal-product">
+              <!-- Dynamically rendered custom product deal -->
+            </div>
+          </div>
+
+          <div class="section-header">
+            <h2 id="catalog-title">Catalog / All Products</h2>
+            <span class="results-count" id="results-count">Showing 6 products</span>
+          </div>
+
+          <div class="products-grid" id="products-grid">
+            <!-- Loaded dynamically by JS -->
+            <div class="loading-spinner">
+              <div class="spinner"></div>
+              <p>Decrypting product catalog...</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Product Details View (Full Screen Layout) -->
+    <div class="view-panel hidden" id="product-detail-view">
+      <div class="store-container">
+        <button class="btn btn-link" id="detail-back-btn">
+          <i class="fa-solid fa-arrow-left"></i> Back to Results
+        </button>
+        
+        <div class="product-detail-layout" id="product-detail-content">
+          <!-- Injected dynamically by JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Shopping Cart View (Amazon style Side-by-Side) -->
+    <div class="view-panel hidden" id="cart-view">
+      <div class="store-container checkout-split">
+        <div class="cart-left-panel">
+          <h2>Shopping Cart</h2>
+          <hr class="summary-divider">
+          <div class="cart-items-list" id="cart-items-list-container">
+            <!-- Injected dynamically by JS -->
+          </div>
+        </div>
+
+        <div class="cart-right-panel" id="cart-pricing-details-card">
+          <div class="pricing-card-header">
+            <h3>Price Details</h3>
+          </div>
+          <hr class="summary-divider">
+          <div class="price-line">
+            <span>Price (<span id="pricing-item-count">0</span> items)</span>
+            <span id="pricing-subtotal">$0.00</span>
+          </div>
+          <div class="price-line text-success">
+            <span>Discount (Promo)</span>
+            <span id="pricing-discount">-$0.00</span>
+          </div>
+          <div class="price-line">
+            <span>Delivery Charges</span>
+            <span id="pricing-delivery" class="text-success">FREE</span>
+          </div>
+          <hr class="summary-divider">
+          <div class="price-line total-price-line">
+            <span>Total Amount</span>
+            <span id="pricing-total">$0.00</span>
+          </div>
+          <hr class="summary-divider">
+          <button class="btn btn-primary btn-block btn-glow" id="cart-checkout-trigger">
+            Proceed to Checkout
+          </button>
+          <div class="secure-badge-row">
+            <i class="fa-solid fa-shield-halved"></i> <span>Secure Transaction. Authentic Products Only.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flipkart-Style Checkout Accordion View -->
+    <div class="view-panel hidden" id="checkout-view">
+      <div class="store-container checkout-split">
+        <div class="checkout-accordion-container">
+          
+          <!-- Accordion Step 1: User Verification -->
+          <div class="checkout-accordion-step active" id="checkout-step-panel-1">
+            <div class="step-header">
+              <span class="step-number">1</span>
+              <h3>LOGIN & SECURITY PROTOCOL</h3>
+              <span class="step-summary-badge" id="checkout-user-summary">Guest User</span>
+            </div>
+            <div class="step-body" id="checkout-step-body-1">
+              <div class="auth-required-panel">
+                <p>Secure login required to process transaction ledger.</p>
+                <button class="btn btn-primary" id="checkout-login-trigger">Sign In / Register</button>
+              </div>
+              <div class="auth-verified-panel hidden">
+                <p>Identified: <strong id="checkout-user-fullname">rohith</strong> (<span id="checkout-user-email">gadiparthi@gmail.com</span>)</p>
+                <button class="btn btn-outline btn-sm" id="checkout-step-1-next-btn">Continue to Shipping</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Step 2: Shipping Address selection -->
+          <div class="checkout-accordion-step" id="checkout-step-panel-2">
+            <div class="step-header">
+              <span class="step-number">2</span>
+              <h3>DELIVERY ADDRESS</h3>
+              <span class="step-summary-badge" id="checkout-address-summary">None selected</span>
+            </div>
+            <div class="step-body hidden" id="checkout-step-body-2">
+              <!-- Address book list -->
+              <div class="address-book-grid" id="checkout-address-book">
+                <!-- Address cards injected by JS -->
+              </div>
+              
+              <button class="btn btn-outline btn-block" id="checkout-show-add-address-btn">
+                <i class="fa-solid fa-plus"></i> Add New Delivery Address
+              </button>
+
+              <!-- Hidden Add New Address Form -->
+              <form id="checkout-new-address-form" class="address-form-box hidden">
+                <h4>New Delivery Address</h4>
+                <div class="form-grid">
+                  <div class="form-field full-width">
+                    <label for="new-addr-title">Address Nickname (e.g. Home, Office)</label>
+                    <input type="text" id="new-addr-title" class="form-input" placeholder="Home">
+                  </div>
+                  <div class="form-field">
+                    <label for="new-addr-name">Recipient Full Name</label>
+                    <input type="text" id="new-addr-name" class="form-input" placeholder="rohith" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="new-addr-phone">Phone Number</label>
+                    <input type="text" id="new-addr-phone" class="form-input" placeholder="+91 98765-43210" required>
+                  </div>
+                  <div class="form-field full-width">
+                    <label for="new-addr-street">Street Address</label>
+                    <input type="text" id="new-addr-street" class="form-input" placeholder="4-16 gadepadu, near masjid" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="new-addr-city">City</label>
+                    <input type="text" id="new-addr-city" class="form-input" placeholder="Khammam" required>
+                  </div>
+                  <div class="form-field">
+                    <label for="new-addr-zip">Zip/Postal Code</label>
+                    <input type="text" id="new-addr-zip" class="form-input" placeholder="507122" required>
+                  </div>
+                  <div class="form-field full-width">
+                    <label for="new-addr-country">Country</label>
+                    <input type="text" id="new-addr-country" class="form-input" placeholder="India" required>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <button type="button" class="btn btn-outline" id="new-addr-cancel-btn">Cancel</button>
+                  <button type="submit" class="btn btn-primary">Save and Deliver Here</button>
+                </div>
+              </form>
+
+              <div class="address-step-actions hidden" id="address-proceed-actions">
+                <button class="btn btn-primary" id="checkout-step-2-next-btn">Deliver to Selected Address</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Step 3: Payment details -->
+          <div class="checkout-accordion-step" id="checkout-step-panel-3">
+            <div class="step-header">
+              <span class="step-number">3</span>
+              <h3>PAYMENT ARCHITECTURE</h3>
+              <span class="step-summary-badge" id="checkout-payment-summary">None selected</span>
+            </div>
+            <div class="step-body hidden" id="checkout-step-body-3">
+              <div class="payment-accordion-wrapper">
+                <!-- Payment methods options -->
+                <div class="payment-options-list">
+                  <label class="payment-method-row">
+                    <input type="radio" name="checkout-payment-method" value="credit-card" checked>
+                    <div class="payment-method-desc">
+                      <i class="fa-solid fa-credit-card"></i>
+                      <div>
+                        <strong>Secure Credit/Debit Card</strong>
+                        <span>Process transaction via Stripe gateway.</span>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="payment-method-row">
+                    <input type="radio" name="checkout-payment-method" value="upi">
+                    <div class="payment-method-desc">
+                      <i class="fa-solid fa-qrcode"></i>
+                      <div>
+                        <strong>UPI Smart Link</strong>
+                        <span>Scan a dynamically generated secure QR code.</span>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="payment-method-row">
+                    <input type="radio" name="checkout-payment-method" value="netbanking">
+                    <div class="payment-method-desc">
+                      <i class="fa-solid fa-building-columns"></i>
+                      <div>
+                        <strong>Net Banking</strong>
+                        <span>Sign in securely to your cyber banking node.</span>
+                      </div>
+                    </div>
+                  </label>
+
+                  <label class="payment-method-row">
+                    <input type="radio" name="checkout-payment-method" value="cod">
+                    <div class="payment-method-desc">
+                      <i class="fa-solid fa-truck-ramp-box"></i>
+                      <div>
+                        <strong>Cash / Pod on Delivery</strong>
+                        <span>Settle with the courier droid on delivery.</span>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- Credit Card Detail Panel -->
+                <div class="payment-detail-panels" id="card-panel-details">
+                  <div class="credit-card-inputs">
+                    <div class="form-field">
+                      <label for="checkout-card-num">Card Number</label>
+                      <div class="card-input-wrapper">
+                        <input type="text" id="checkout-card-num" class="form-input" placeholder="4111 2222 3333 4444" maxlength="19">
+                        <i class="fa-brands fa-cc-stripe card-brand-icon"></i>
+                      </div>
+                    </div>
+                    <div class="form-grid">
+                      <div class="form-field">
+                        <label for="checkout-card-expiry">Expiry Date</label>
+                        <input type="text" id="checkout-card-expiry" class="form-input" placeholder="MM/YY" maxlength="5">
+                      </div>
+                      <div class="form-field">
+                        <label for="checkout-card-cvc">CVC</label>
+                        <input type="password" id="checkout-card-cvc" class="form-input" placeholder="•••" maxlength="4">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- UPI Detail Panel -->
+                <div class="payment-detail-panels hidden" id="upi-panel-details">
+                  <div class="upi-inputs-box">
+                    <p>Enter your Virtual Payment Address (VPA) or scan the QR Code below.</p>
+                    <div class="vpa-input-row">
+                      <input type="text" id="checkout-vpa" class="form-input" placeholder="username@aetherpay">
+                      <button class="btn btn-outline" id="generate-qr-btn">Generate QR</button>
+                    </div>
+                    <div class="qr-code-holder hidden" id="payment-qr-holder">
+                      <div class="qr-box">
+                        <!-- Simulated QR Code SVG -->
+                        <svg width="150" height="150" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="150" height="150" fill="#fff"/>
+                          <rect x="10" y="10" width="30" height="30" fill="#000"/>
+                          <rect x="15" y="15" width="20" height="20" fill="#fff"/>
+                          <rect x="110" y="10" width="30" height="30" fill="#000"/>
+                          <rect x="115" y="15" width="20" height="20" fill="#fff"/>
+                          <rect x="10" y="110" width="30" height="30" fill="#000"/>
+                          <rect x="15" y="115" width="20" height="20" fill="#fff"/>
+                          <!-- Dots random -->
+                          <rect x="50" y="20" width="10" height="10" fill="#000"/>
+                          <rect x="70" y="10" width="10" height="30" fill="#000"/>
+                          <rect x="90" y="30" width="15" height="15" fill="#000"/>
+                          <rect x="50" y="60" width="40" height="40" fill="#000"/>
+                          <rect x="100" y="80" width="20" height="40" fill="#000"/>
+                          <rect x="60" y="120" width="30" height="10" fill="#000"/>
+                        </svg>
+                      </div>
+                      <span class="qr-text">Scan via any UPI App (AetherPay, BHIM, PhonePe)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="payment-step-actions">
+                <button class="btn btn-primary" id="checkout-step-3-next-btn">Verify and Select Payment</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Step 4: Final Review & Placement -->
+          <div class="checkout-accordion-step" id="checkout-step-panel-4">
+            <div class="step-header">
+              <span class="step-number">4</span>
+              <h3>REVIEW ITEMS & DISPATCH</h3>
+            </div>
+            <div class="step-body hidden" id="checkout-step-body-4">
+              <div class="checkout-review-items" id="checkout-review-items-container">
+                <!-- Items list loaded dynamically -->
+              </div>
+              <div class="checkout-confirm-block">
+                <p>By clicking place order, you authorize the secure transaction ledger processing.</p>
+                <button class="btn btn-primary btn-block btn-glow" id="checkout-place-order-btn">
+                  Place Order <span id="checkout-final-pay-total">$0.00</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Summary pricing column on checkout -->
+        <div class="cart-right-panel" id="checkout-summary-card">
+          <div class="pricing-card-header">
+            <h3>Order Summary</h3>
+          </div>
+          <hr class="summary-divider">
+          <div class="checkout-pricing-details">
+            <div class="price-line">
+              <span>Items Subtotal:</span>
+              <span id="checkout-summary-subtotal">$0.00</span>
+            </div>
+            <div class="price-line text-success">
+              <span>Promo Savings:</span>
+              <span id="checkout-summary-discount">-$0.00</span>
+            </div>
+            <div class="price-line">
+              <span>Delivery Cost:</span>
+              <span id="checkout-summary-delivery">FREE</span>
+            </div>
+            <hr class="summary-divider">
+            <div class="price-line total-price-line">
+              <span>Order Total:</span>
+              <span id="checkout-summary-total">$0.00</span>
+            </div>
+          </div>
+          <hr class="summary-divider">
+          <!-- Delivery estimates details in sidebar -->
+          <div class="checkout-delivery-estimate-box" id="checkout-summary-estimate-details">
+            <i class="fa-solid fa-clock"></i> <span>Awaiting shipping details calculations...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Orders Dashboard View -->
+    <div class="view-panel hidden" id="orders-view">
+      <div class="store-container">
+        <h2>Your Account Orders</h2>
+        <div class="orders-tab-menu">
+          <button class="orders-tab active" id="orders-tab-all">All Orders</button>
+          <button class="orders-tab" id="orders-tab-processing">Processing</button>
+          <button class="orders-tab" id="orders-tab-delivered">Delivered</button>
+        </div>
+        <div class="orders-list-container" id="orders-list">
+          <!-- Loaded dynamically by JS -->
+          <p class="no-orders">You have not initiated any transactions yet.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Order Tracking and Logistics Timeline -->
+    <div class="view-panel hidden" id="tracking-view">
+      <div class="store-container">
+        <button class="btn btn-link" id="tracking-back-btn">
+          <i class="fa-solid fa-arrow-left"></i> Back to Orders
+        </button>
+
+        <div class="tracking-layout-grid">
+          <!-- Left tracking status board -->
+          <div class="tracking-left-panel">
+            <div class="tracking-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+              <div>
+                <h2>Shipment Tracker: <span id="tracking-order-id">ORD-XXXXXX</span></h2>
+                <p>Carrier: <strong id="tracking-carrier-name">Aetheria Courier</strong> | Tracking No: <span id="tracking-number-val">AE-XXXX-JP</span></p>
+              </div>
+              <span class="map-status" id="tracking-active-hub" style="font-size: 0.9rem; padding: 6px 12px; background: rgba(0, 240, 255, 0.1);">Status: Estimating Location</span>
+            </div>
+            <hr class="summary-divider">
+            
+            <!-- Delivery timeline progress dots -->
+            <div class="tracking-timeline" id="tracking-timeline-progress">
+              <!-- Chronological steps -->
+              <div class="timeline-step" id="timeline-step-placed">
+                <div class="timeline-bullet"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="timeline-info">
+                  <h4>Order Placed</h4>
+                  <p class="timeline-desc" id="timeline-desc-placed">Order received in routing queue.</p>
+                  <span class="timeline-time" id="timeline-time-placed">2026-05-20 09:30</span>
+                </div>
+              </div>
+              
+              <div class="timeline-step" id="timeline-step-packed">
+                <div class="timeline-bullet"><i class="fa-solid fa-box"></i></div>
+                <div class="timeline-info">
+                  <h4>Packed</h4>
+                  <p class="timeline-desc" id="timeline-desc-packed">Package sealed at facility.</p>
+                  <span class="timeline-time" id="timeline-time-packed">Awaiting...</span>
+                </div>
+              </div>
+              
+              <div class="timeline-step" id="timeline-step-shipped">
+                <div class="timeline-bullet"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="timeline-info">
+                  <h4>Shipped</h4>
+                  <p class="timeline-desc" id="timeline-desc-shipped">Dispatched on transit vessel.</p>
+                  <span class="timeline-time" id="timeline-time-shipped">Awaiting...</span>
+                </div>
+              </div>
+              
+              <div class="timeline-step" id="timeline-step-delivery">
+                <div class="timeline-bullet"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                <div class="timeline-info">
+                  <h4>Out for Delivery</h4>
+                  <p class="timeline-desc" id="timeline-desc-delivery">Courier drone is dispatched on route.</p>
+                  <span class="timeline-time" id="timeline-time-delivery">Awaiting...</span>
+                </div>
+              </div>
+              
+              <div class="timeline-step" id="timeline-step-completed">
+                <div class="timeline-bullet"><i class="fa-solid fa-house-chimney-user"></i></div>
+                <div class="timeline-info">
+                  <h4>Delivered</h4>
+                  <p class="timeline-desc" id="timeline-desc-completed">Package arrived at destination.</p>
+                  <span class="timeline-time" id="timeline-time-completed">Awaiting...</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weather delays alert dashboard -->
+            <div class="weather-alert-card" id="tracking-weather-card">
+              <i class="fa-solid fa-cloud-sun-rain weather-icon"></i>
+              <div class="weather-details">
+                <h4>Transit Weather & Logistic Impact</h4>
+                <p id="tracking-weather-text">Querying transit route atmospheric conditions...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Interactive Maps Display (Hidden per user request) -->
+          <div class="tracking-right-panel hidden">
+            <div class="map-card-header">
+              <h3>Live Shipment Transit Route</h3>
+            </div>
+            <!-- Leaflet map element -->
+            <div class="map-container" id="tracking-leaflet-map">
+              <div class="map-placeholder-loader">
+                <div class="spinner"></div>
+                <p>Initializing secure global navigation map...</p>
+              </div>
+            </div>
+            <div class="map-coordinates-legend">
+              <div><span class="legend-dot start"></span> Origin Warehouse (Tokyo)</div>
+              <div><span class="legend-dot vehicle"></span> Transit Carrier</div>
+              <div><span class="legend-dot end"></span> Destination</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manage Addresses Book Modal -->
+    <div class="modal-overlay hidden" id="address-book-modal">
+      <div class="modal-card modal-medium">
+        <button class="modal-close-btn" id="close-address-modal-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <h3>Your Saved Delivery Addresses</h3>
+        <hr class="summary-divider">
+        <div class="address-book-grid" id="modal-address-book-list">
+          <!-- Injected dynamically -->
+        </div>
+        <button class="btn btn-primary btn-block" id="modal-show-add-address-form-btn" style="margin-top: 20px;">
+          Add Another Address
+        </button>
+      </div>
+    </div>
+
+    <!-- User Auth Modal (Login / Registration) -->
+    <div class="modal-overlay hidden" id="auth-modal">
+      <div class="modal-card modal-small">
+        <button class="modal-close-btn" id="close-auth-modal-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="auth-tabs">
+          <button class="auth-tab-btn active" id="tab-login-btn">Login</button>
+          <button class="auth-tab-btn" id="tab-register-btn">Register</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="login-form" class="auth-form-content">
+          <div class="form-field">
+            <label for="login-email">Email Address</label>
+            <input type="email" id="login-email" class="form-input" placeholder="rohith@gmail.com" required>
+          </div>
+          <div class="form-field">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" class="form-input" placeholder="••••••••" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-glow">Verify Identity Protocol</button>
+          <p class="auth-toggle-hint">First time? <a href="#" id="toggle-to-register">Create an account</a></p>
+        </form>
+
+        <!-- Register Form -->
+        <form id="register-form" class="auth-form-content hidden">
+          <div class="form-field">
+            <label for="register-name">Full Name</label>
+            <input type="text" id="register-name" class="form-input" placeholder="rohith" required>
+          </div>
+          <div class="form-field">
+            <label for="register-email">Email Address</label>
+            <input type="email" id="register-email" class="form-input" placeholder="rohith@gmail.com" required>
+          </div>
+          <div class="form-field">
+            <label for="register-password">Password (min 6 chars)</label>
+            <input type="password" id="register-password" class="form-input" placeholder="••••••••" minlength="6" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-glow">Establish Identity Ledger</button>
+          <p class="auth-toggle-hint">Already registered? <a href="#" id="toggle-to-login">Log in here</a></p>
+        </form>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2 class="footer-logo"><span class="logo-accent">A</span>ETHERIA</h2>
+        <p>Premium, high-performance hardware and aesthetics for future workspaces.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Tech Spectrum</h4>
+          <ul>
+            <li><a href="#" class="footer-cat-link" data-cat="lighting">Lighting</a></li>
+            <li><a href="#" class="footer-cat-link" data-cat="keyboards">Keyboards</a></li>
+            <li><a href="#" class="footer-cat-link" data-cat="audio">Audio Hardware</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Secured Protocol</h4>
+          <ul>
+            <li><a href="#">FIDO2 Security</a></li>
+            <li><a href="#">Terms of Access</a></li>
+            <li><a href="#">Privacy Ledger</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; 2026 Aetheria Technologies. Fully encrypted connections.</p>
+    </div>
+  </footer>
+
+  <!-- Leaflet Map JS Library (Zero Key required, open source Map API fallback) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Frontend Logic Script -->
+  <script src="/js/app.js"></script>
+</body>
+</html>

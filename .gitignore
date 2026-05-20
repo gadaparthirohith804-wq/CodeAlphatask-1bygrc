@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+/node_modules
+frontend/node_modules/
+
+# Local env files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+frontend/.env
+frontend/.env.local
+frontend/.env.development
+frontend/.env.test
+frontend/.env.production
+
+# Production builds
+dist/
+frontend/dist/
+build/
+frontend/build/
+
+# System files
+.DS_Store
+Thumbs.db
